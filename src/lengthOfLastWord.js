@@ -11,4 +11,4 @@ function lengthOfLastWord(s) {
     }
     return i;
 };
-lengthOfLastWord('Today is a nice day')
+// lengthOfLastWord('Today is a nice day') => result: 3
