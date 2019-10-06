@@ -13,8 +13,8 @@ let removeElement = function(nums, val) {
     return nums.lenght;
 };
 
-// Solution 2:
 //Remove duplicates ES6/ES5
+// Solution 2:
 let nums = [1,2,3,3]
 var removeDuplicates = function(nums) {
   return nums.filter((e,p,a) => a.indexOf(e) == p)
