@@ -16,4 +16,4 @@ let isPerfectSquare = function(num) {
     return false;
 };
 
-isPerfectSquare(num);
+// isPerfectSquare(num) => result: true
