@@ -14,4 +14,4 @@ let toLowerCase = function(str) {
   return lowerCase;
 }
 
-toLowerCase(str);
+// toLowerCase(str);
