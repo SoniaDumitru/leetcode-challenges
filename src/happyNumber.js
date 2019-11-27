@@ -15,4 +15,4 @@ function isHappy(n){
   }
 };
 
-// isHappy(19) => result: 19
+// isHappy(19) => result: true
