@@ -5,4 +5,4 @@ function sumDigits(num) {
     return arr.length === 1 ? num : sumDigits(arr.reduce((a, b) => parseInt(a) + parseInt(b)))
 };
 
-sumDigits(33) => result: 6
+// sumDigits(33) => result: 6
