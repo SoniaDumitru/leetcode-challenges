@@ -7,4 +7,4 @@ function happyNumber(n) {
   return true;
 };
 
-happyNumber(19) => result: true
+// happyNumber(19) => result: true
