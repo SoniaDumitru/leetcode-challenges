@@ -9,3 +9,29 @@ let cpdomains = [
 "5 wiki.org","5 org",
 "1 intel.mail.com",
 "951 com"]
+
+var subdomainVisits = function(cpdomains) {
+    const domains = {}
+    cpdomains.map(cpdomain => {
+        const countPair = cpdomain.split(' ')
+        const count = Number(countPair[0])
+        const subdomains = countPair[1].split('.')
+        // console.log(subdomains)
+
+        subdomains.map((index) => {
+            const key = subdomains.slice(index).join('.')
+            const total = domains[key] ? domains[key] + count : count
+            domains[key] = total
+            console.log(domains[key])
+        })
+    })
+    return Object.keys(domains).map(key => `${domains[key]} ${key}`)
+};
+
+// subdomainVisits(cpdomains) => result: [ '1802 mail.com',
+//   '100 yahoo.com',
+//   '2700 google.mail.com',
+//   '10 wiki.org',
+//   '5 org',
+//   '3 intel.mail.com',
+//   '951 com' ]
