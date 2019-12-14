@@ -12,7 +12,6 @@ function backSpaceCompare(S, T) {
 
 function reducedString(string) {
   let stack = [];
-
   for (let i=0; i < string.length; i++) {
     if (string[i] !== '#') stack.push(string[i]);
     else stack.pop();
