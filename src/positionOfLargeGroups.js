@@ -28,4 +28,4 @@ function largeGroupPositions(string) {
     return res;
 };
 
-largeGroupPositions(string) => result: [ [ 3, 6 ] ]
+largeGroupPositions(string) => result: [ [ 3, 6 ] ];
