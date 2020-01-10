@@ -19,4 +19,4 @@ for(var i=0; i<arr.length;i++) {
     return total;
 }
 
-replaceElements(arr) => result: [ 18, 6, 6, 6, 1, -1 ]
+// replaceElements(arr) => result: [ 18, 6, 6, 6, 1, -1 ]
