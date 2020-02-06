@@ -35,3 +35,25 @@ function intersection(arrA, arrB) {
   }
   return shared;
 }
+
+// O(n+m) time complexity, but O(n) additional space
+function intersection(arrA, arrB) {
+  // return shortest array
+  const smaller = arrB.length < arrA.length ? arrB : arrA
+  // return longest array
+  const larger = arrB.length >= arrA.length ? arrB : arrA
+  // create a hash where to store key elements with the value of true. ex: { '1': true, '2': true }
+  const hashSmaller = {}
+  smaller.forEach(e => hashSmaller[e] = true)
+  // return all elements in larger for which the condition is true (elements in smaller exist)
+  return larger.filter(e => hashSmaller.hasOwnProperty(e))
+}
+
+// Using ES6 Sets
+function intersection (arrA, arrB) {
+  const smaller = arrB.length < arrA.length ? arrB : arrA;
+  const larger = arrB.length >= arrA.length ? arrB : arrA;
+
+  const setSmaller = new Set(smaller);
+  return larger.filter(e => setSmaller.has(e));
+}
