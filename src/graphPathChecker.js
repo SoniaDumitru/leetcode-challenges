@@ -39,7 +39,7 @@
 // doesPathExist(graph, 'c', 'c') // true
 // doesPathExist(graph, 'r', 's') // true
 // doesPathExist(graph, 's', 'a') // false
-
+// Recursion:
 const doesPathExist = (graph, start, target, visited = {}) => {
   if (!graph[start]) return false
   visited[start] = true;
@@ -55,3 +55,24 @@ const doesPathExist = (graph, start, target, visited = {}) => {
 }
 
 // Note that we're using an object to keep track of visted notes. Note also the way in which we initialize an additional argument to allow us to pass this object to the recursive function invocation-- this is a useful trick that lets us not pollute global scope while avoiding the need for a helper function.
+
+// Iterative:
+
+  const doesPathExist(graph, start, target) => {
+    if (!graph[start]) return false;
+    const queue = [start]
+    const visited = {}
+
+    while(queue.length) {
+      const current = queue.shift()
+      visited[current] = true
+      for (let i = 0; i < graph[current].length; i++) {
+        const child = graph[current][i]
+        if (child === target) return true
+        if (!visited[child]) {
+          queue.push(child)
+        }
+      }
+    }
+    return false
+  }
