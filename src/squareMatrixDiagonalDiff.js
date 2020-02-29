@@ -6,10 +6,8 @@
 // 1 8 9 7
 
 function diagonalDifference(arr) {
-
     let principalDiagonal = 0;
     let secondaryDiagonal = 0;
-
     for (let i = 0; i < arr.length; i++) {
         // first add up the sum for the first diagonal( where first diagonal means i and j are always gonna be equal)
         for (let j = 0; j < arr.length; j++) {
