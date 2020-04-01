@@ -6,6 +6,7 @@
 //
 // Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k. For example, there won't be input like 3a or 2[4].
 
+// Pseudocode:
 // k = how many times we repeat stuff
 // [ = now I need to start storing what I need to repeat
 // ] = better start repeating
@@ -28,6 +29,7 @@ const decodeString = (s) => {
       repeatString.push(solution); // ['', a]
       solution = '';
     } else if (char === "]") {
+
       solution = repeatString.pop() + solution.repeat(multiply.pop()) // acc
     } else { // constructing the substring
       solution += char; // 'c'
