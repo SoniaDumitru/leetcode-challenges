@@ -26,3 +26,5 @@ var removeDuplicates = function(nums) {
   return nums.reduce((x,y) => x.includes(y) ? x : [...x,y], [])
 };
 removeDuplicates(nums);
+
+// Solution 4
