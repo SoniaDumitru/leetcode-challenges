@@ -31,7 +31,7 @@ function sortString(string) {
 
     let flag = true;
     while(solution.length<string.length) {
-       for (let i=0; i<temp.length; i++) {
+       for (let i=0; i<temp.length; i++)a {
            let pos = i;
            if (!flag) {
                pos = 25-i;

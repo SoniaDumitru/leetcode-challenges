@@ -4,11 +4,26 @@
 // Open brackets must be closed in the correct order.
 
 let isValid = function (str) {
-    const parens = { "{": "}", "[": "]", "(": ")" };
+    // create parens object
+    const parens = { 
+        "{": "}", 
+        "[": "]", 
+        "(": ")" 
+    };
     const stack = [];
+    // for each character in string
     for (let char of str) {
-        if (Object.keys(parens).includes(char)) stack.push(char);
-        else if (parens[stack.pop()] !== char) return false;
+        // check if it's included in object keys array ["{", "[", "("]
+        if (Object.keys(parens).includes(char)) {
+            // if included push char into stack => [ '[', '{' ]
+            stack.push(char);
+        } else if (parens[stack.pop()] !== char) {
+            return false;
+        }
     }
     return stack.length > 0 ? false : true;
 };
+
+
+console.log(isValid('[{}]')); // true
+console.log(isValid('[{}{]')); // false
